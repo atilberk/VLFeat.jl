@@ -18,47 +18,47 @@ export
 
 
 function vl_string_copy(destination,destinationSize::Integer,source)
-    ccall((:vl_string_copy,libvl),vl_size,(Ptr{Uint8},vl_size,Ptr{Uint8}),destination,destinationSize,source)
+    ccall((:vl_string_copy,libvl),vl_size,(Ptr{UInt8},vl_size,Ptr{UInt8}),destination,destinationSize,source)
 end
 
 function vl_string_copy_sub(destination,destinationSize::Integer,beginning,_end)
-    ccall((:vl_string_copy_sub,libvl),vl_size,(Ptr{Uint8},vl_size,Ptr{Uint8},Ptr{Uint8}),destination,destinationSize,beginning,_end)
+    ccall((:vl_string_copy_sub,libvl),vl_size,(Ptr{UInt8},vl_size,Ptr{UInt8},Ptr{UInt8}),destination,destinationSize,beginning,_end)
 end
 
 function vl_string_parse_protocol(string,protocol)
-    ccall((:vl_string_parse_protocol,libvl),Ptr{Uint8},(Ptr{Uint8},Ptr{Cint}),string,protocol)
+    ccall((:vl_string_parse_protocol,libvl),Ptr{UInt8},(Ptr{UInt8},Ptr{Cint}),string,protocol)
 end
 
 function vl_string_protocol_name(prot::Integer)
-    ccall((:vl_string_protocol_name,libvl),Ptr{Uint8},(Cint,),prot)
+    ccall((:vl_string_protocol_name,libvl),Ptr{UInt8},(Cint,),prot)
 end
 
 function vl_string_basename(destination,destinationSize::Integer,source,maxNumStrippedExtension::Integer)
-    ccall((:vl_string_basename,libvl),vl_size,(Ptr{Uint8},vl_size,Ptr{Uint8},vl_size),destination,destinationSize,source,maxNumStrippedExtension)
+    ccall((:vl_string_basename,libvl),vl_size,(Ptr{UInt8},vl_size,Ptr{UInt8},vl_size),destination,destinationSize,source,maxNumStrippedExtension)
 end
 
-function vl_string_replace_wildcard(destination,destinationSize::Integer,src,wildcardChar::Uint8,escapeChar::Uint8,replacement)
-    ccall((:vl_string_replace_wildcard,libvl),vl_size,(Ptr{Uint8},vl_size,Ptr{Uint8},Uint8,Uint8,Ptr{Uint8}),destination,destinationSize,src,wildcardChar,escapeChar,replacement)
+function vl_string_replace_wildcard(destination,destinationSize::Integer,src,wildcardChar::UInt8,escapeChar::UInt8,replacement)
+    ccall((:vl_string_replace_wildcard,libvl),vl_size,(Ptr{UInt8},vl_size,Ptr{UInt8},UInt8,UInt8,Ptr{UInt8}),destination,destinationSize,src,wildcardChar,escapeChar,replacement)
 end
 
-function vl_string_find_char_rev(beginning,_end,c::Uint8)
-    ccall((:vl_string_find_char_rev,libvl),Ptr{Uint8},(Ptr{Uint8},Ptr{Uint8},Uint8),beginning,_end,c)
+function vl_string_find_char_rev(beginning,_end,c::UInt8)
+    ccall((:vl_string_find_char_rev,libvl),Ptr{UInt8},(Ptr{UInt8},Ptr{UInt8},UInt8),beginning,_end,c)
 end
 
 function vl_string_length(string)
-    ccall((:vl_string_length,libvl),vl_size,(Ptr{Uint8},),string)
+    ccall((:vl_string_length,libvl),vl_size,(Ptr{UInt8},),string)
 end
 
 function vl_string_casei_cmp(string1,string2)
-    ccall((:vl_string_casei_cmp,libvl),Cint,(Ptr{Uint8},Ptr{Uint8}),string1,string2)
+    ccall((:vl_string_casei_cmp,libvl),Cint,(Ptr{UInt8},Ptr{UInt8}),string1,string2)
 end
 
 function vl_enumeration_get(enumeration,name)
-    ccall((:vl_enumeration_get,libvl),Ptr{VlEnumerator},(Ptr{VlEnumerator},Ptr{Uint8}),enumeration,name)
+    ccall((:vl_enumeration_get,libvl),Ptr{VlEnumerator},(Ptr{VlEnumerator},Ptr{UInt8}),enumeration,name)
 end
 
 function vl_enumeration_get_casei(enumeration,name)
-    ccall((:vl_enumeration_get_casei,libvl),Ptr{VlEnumerator},(Ptr{VlEnumerator},Ptr{Uint8}),enumeration,name)
+    ccall((:vl_enumeration_get_casei,libvl),Ptr{VlEnumerator},(Ptr{VlEnumerator},Ptr{UInt8}),enumeration,name)
 end
 
 function vl_enumeration_get_by_value(enumeration,value::vl_index)

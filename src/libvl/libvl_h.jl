@@ -357,34 +357,34 @@ const VL_ERR_NO_MORE = 5
 # Skipping MacroDefinition: VL_MAX ( x , y ) ( ( ( x ) > ( y ) ) ? ( x ) : ( y ) )
 # Skipping MacroDefinition: VL_SHIFT_LEFT ( x , n ) ( ( ( n ) >= 0 ) ? ( ( x ) << ( n ) ) : ( ( x ) >> - ( n ) ) )
 
-typealias vl_uint32 Uint32
+typealias vl_uint32 UInt32
 typealias vl_type vl_uint32
 typealias printf_func_t Ptr{Void}
 
 # begin enum ANONYMOUS_1
-typealias ANONYMOUS_1 Uint32
-const VlHomogeneousKernelIntersection = (uint32)(0)
-const VlHomogeneousKernelChi2 = (uint32)(1)
-const VlHomogeneousKernelJS = (uint32)(2)
+typealias ANONYMOUS_1 UInt32
+const VlHomogeneousKernelIntersection = (UInt32)(0)
+const VlHomogeneousKernelChi2 = (UInt32)(1)
+const VlHomogeneousKernelJS = (UInt32)(2)
 # end enum ANONYMOUS_1
 
 # begin enum VlHomogeneousKernelType
-typealias VlHomogeneousKernelType Uint32
-const VlHomogeneousKernelIntersection = (uint32)(0)
-const VlHomogeneousKernelChi2 = (uint32)(1)
-const VlHomogeneousKernelJS = (uint32)(2)
+typealias VlHomogeneousKernelType UInt32
+const VlHomogeneousKernelIntersection = (UInt32)(0)
+const VlHomogeneousKernelChi2 = (UInt32)(1)
+const VlHomogeneousKernelJS = (UInt32)(2)
 # end enum VlHomogeneousKernelType
 
 # begin enum ANONYMOUS_2
-typealias ANONYMOUS_2 Uint32
-const VlHomogeneousKernelMapWindowUniform = (uint32)(0)
-const VlHomogeneousKernelMapWindowRectangular = (uint32)(1)
+typealias ANONYMOUS_2 UInt32
+const VlHomogeneousKernelMapWindowUniform = (UInt32)(0)
+const VlHomogeneousKernelMapWindowRectangular = (UInt32)(1)
 # end enum ANONYMOUS_2
 
 # begin enum VlHomogeneousKernelMapWindowType
-typealias VlHomogeneousKernelMapWindowType Uint32
-const VlHomogeneousKernelMapWindowUniform = (uint32)(0)
-const VlHomogeneousKernelMapWindowRectangular = (uint32)(1)
+typealias VlHomogeneousKernelMapWindowType UInt32
+const VlHomogeneousKernelMapWindowUniform = (UInt32)(0)
+const VlHomogeneousKernelMapWindowRectangular = (UInt32)(1)
 # end enum VlHomogeneousKernelMapWindowType
 
 typealias _VlHomogeneousKernelMap Void
@@ -430,12 +430,12 @@ const VL_BIG_UINT = 0xffffffff
 typealias vl_int64 Clonglong
 typealias vl_int32 Cint
 typealias vl_int16 Int16
-typealias vl_int8 Uint8
+typealias vl_int8 UInt8
 typealias vl_uint64 Culonglong
-typealias vl_uint16 Uint16
+typealias vl_uint16 UInt16
 typealias vl_uint8 Cuchar
 typealias vl_int Cint
-typealias vl_uint Uint32
+typealias vl_uint UInt32
 typealias vl_bool Cint
 typealias vl_intptr vl_int64
 typealias vl_uintptr vl_uint64
@@ -470,9 +470,9 @@ const VL_IKMACC_MAX = 0x7fffffff
 typealias vl_ikmacc_t vl_int32
 
 # begin enum VlIKMAlgorithms
-typealias VlIKMAlgorithms Uint32
-const VL_IKM_LLOYD = (uint32)(0)
-const VL_IKM_ELKAN = (uint32)(1)
+typealias VlIKMAlgorithms UInt32
+const VL_IKM_LLOYD = (UInt32)(0)
+const VL_IKM_ELKAN = (UInt32)(1)
 # end enum VlIKMAlgorithms
 
 type _VlIKMFilt
@@ -506,7 +506,7 @@ type _VlKDTreeNode
     parent::vl_uindex
     lowerChild::vl_index
     upperChild::vl_index
-    splitDimension::Uint32
+    splitDimension::UInt32
     splitThreshold::Cdouble
     lowerBound::Cdouble
     upperBound::Cdouble
@@ -515,7 +515,7 @@ end
 typealias VlKDTreeNode _VlKDTreeNode
 
 type _VlKDTreeSplitDimension
-    dimension::Uint32
+    dimension::UInt32
     mean::Cdouble
     variance::Cdouble
 end
@@ -534,7 +534,7 @@ type VlKDTree
     numUsedNodes::vl_size
     numAllocatedNodes::vl_size
     dataIndex::Ptr{VlKDTreeDataIndexEntry}
-    depth::Uint32
+    depth::UInt32
 end
 
 type _VlKDForestSearchState
@@ -546,15 +546,15 @@ end
 typealias VlKDForestSearchState _VlKDForestSearchState
 
 # begin enum _VlKDTreeThresholdingMethod
-typealias _VlKDTreeThresholdingMethod Uint32
-const VL_KDTREE_MEDIAN = (uint32)(0)
-const VL_KDTREE_MEAN = (uint32)(1)
+typealias _VlKDTreeThresholdingMethod UInt32
+const VL_KDTREE_MEDIAN = (UInt32)(0)
+const VL_KDTREE_MEAN = (UInt32)(1)
 # end enum _VlKDTreeThresholdingMethod
 
 # begin enum VlKDTreeThresholdingMethod
-typealias VlKDTreeThresholdingMethod Uint32
-const VL_KDTREE_MEDIAN = (uint32)(0)
-const VL_KDTREE_MEAN = (uint32)(1)
+typealias VlKDTreeThresholdingMethod UInt32
+const VL_KDTREE_MEDIAN = (UInt32)(0)
+const VL_KDTREE_MEAN = (UInt32)(1)
 # end enum VlKDTreeThresholdingMethod
 
 type _VlKDForestNeighbor
@@ -572,7 +572,7 @@ type _VlKDTree
     numUsedNodes::vl_size
     numAllocatedNodes::vl_size
     dataIndex::Ptr{VlKDTreeDataIndexEntry}
-    depth::Uint32
+    depth::UInt32
 end
 
 immutable Array_624_vl_uint32
@@ -1210,18 +1210,18 @@ type VlRand
 end
 
 # begin enum _VlVectorComparisonType
-typealias _VlVectorComparisonType Uint32
-const VlDistanceL1 = (uint32)(0)
-const VlDistanceL2 = (uint32)(1)
-const VlDistanceChi2 = (uint32)(2)
-const VlDistanceHellinger = (uint32)(3)
-const VlDistanceJS = (uint32)(4)
-const VlDistanceMahalanobis = (uint32)(5)
-const VlKernelL1 = (uint32)(6)
-const VlKernelL2 = (uint32)(7)
-const VlKernelChi2 = (uint32)(8)
-const VlKernelHellinger = (uint32)(9)
-const VlKernelJS = (uint32)(10)
+typealias _VlVectorComparisonType UInt32
+const VlDistanceL1 = (UInt32)(0)
+const VlDistanceL2 = (UInt32)(1)
+const VlDistanceChi2 = (UInt32)(2)
+const VlDistanceHellinger = (UInt32)(3)
+const VlDistanceJS = (UInt32)(4)
+const VlDistanceMahalanobis = (UInt32)(5)
+const VlKernelL1 = (UInt32)(6)
+const VlKernelL2 = (UInt32)(7)
+const VlKernelChi2 = (UInt32)(8)
+const VlKernelHellinger = (UInt32)(9)
+const VlKernelJS = (UInt32)(10)
 # end enum _VlVectorComparisonType
 
 typealias VlVectorComparisonType _VlVectorComparisonType
@@ -1303,29 +1303,29 @@ type VlKDForestSearcher
 end
 
 # begin enum _VlKMeansAlgorithm
-typealias _VlKMeansAlgorithm Uint32
-const VlKMeansLloyd = (uint32)(0)
-const VlKMeansElkan = (uint32)(1)
-const VlKMeansANN = (uint32)(2)
+typealias _VlKMeansAlgorithm UInt32
+const VlKMeansLloyd = (UInt32)(0)
+const VlKMeansElkan = (UInt32)(1)
+const VlKMeansANN = (UInt32)(2)
 # end enum _VlKMeansAlgorithm
 
 # begin enum VlKMeansAlgorithm
-typealias VlKMeansAlgorithm Uint32
-const VlKMeansLloyd = (uint32)(0)
-const VlKMeansElkan = (uint32)(1)
-const VlKMeansANN = (uint32)(2)
+typealias VlKMeansAlgorithm UInt32
+const VlKMeansLloyd = (UInt32)(0)
+const VlKMeansElkan = (UInt32)(1)
+const VlKMeansANN = (UInt32)(2)
 # end enum VlKMeansAlgorithm
 
 # begin enum _VlKMeansInitialization
-typealias _VlKMeansInitialization Uint32
-const VlKMeansRandomSelection = (uint32)(0)
-const VlKMeansPlusPlus = (uint32)(1)
+typealias _VlKMeansInitialization UInt32
+const VlKMeansRandomSelection = (UInt32)(0)
+const VlKMeansPlusPlus = (UInt32)(1)
 # end enum _VlKMeansInitialization
 
 # begin enum VlKMeansInitialization
-typealias VlKMeansInitialization Uint32
-const VlKMeansRandomSelection = (uint32)(0)
-const VlKMeansPlusPlus = (uint32)(1)
+typealias VlKMeansInitialization UInt32
+const VlKMeansRandomSelection = (UInt32)(0)
+const VlKMeansPlusPlus = (UInt32)(1)
 # end enum VlKMeansInitialization
 
 typealias VlFloatVectorComparisonFunction Ptr{Void}
@@ -1433,19 +1433,19 @@ typealias VlScaleSpace Void
 
 # begin enum ANONYMOUS_3
 typealias ANONYMOUS_3 Cint
-const VL_PROT_UNKNOWN = (int32)(-1)
-const VL_PROT_NONE = (int32)(0)
-const VL_PROT_ASCII = (int32)(1)
-const VL_PROT_BINARY = (int32)(2)
+const VL_PROT_UNKNOWN = (Int32)(-1)
+const VL_PROT_NONE = (Int32)(0)
+const VL_PROT_ASCII = (Int32)(1)
+const VL_PROT_BINARY = (Int32)(2)
 # end enum ANONYMOUS_3
 
 type _VlEnumerator
-    name::Ptr{Uint8}
+    name::Ptr{UInt8}
     value::vl_index
 end
 
 type VlEnumerator
-    name::Ptr{Uint8}
+    name::Ptr{UInt8}
     value::vl_index
 end
 
@@ -1538,21 +1538,21 @@ type VlArray
 end
 
 # begin enum _VlFrameType
-typealias _VlFrameType Uint32
-const VL_FRAMETYPE_DISC = (uint32)(1)
-const VL_FRAMETYPE_ORIENTED_DISC = (uint32)(2)
-const VL_FRAMETYPE_ELLIPSE = (uint32)(3)
-const VL_FRAMETYPE_ORIENTED_ELLIPSE = (uint32)(4)
-const VL_FRAMETYPE_NUM = (uint32)(5)
+typealias _VlFrameType UInt32
+const VL_FRAMETYPE_DISC = (UInt32)(1)
+const VL_FRAMETYPE_ORIENTED_DISC = (UInt32)(2)
+const VL_FRAMETYPE_ELLIPSE = (UInt32)(3)
+const VL_FRAMETYPE_ORIENTED_ELLIPSE = (UInt32)(4)
+const VL_FRAMETYPE_NUM = (UInt32)(5)
 # end enum _VlFrameType
 
 # begin enum VlFrameType
-typealias VlFrameType Uint32
-const VL_FRAMETYPE_DISC = (uint32)(1)
-const VL_FRAMETYPE_ORIENTED_DISC = (uint32)(2)
-const VL_FRAMETYPE_ELLIPSE = (uint32)(3)
-const VL_FRAMETYPE_ORIENTED_ELLIPSE = (uint32)(4)
-const VL_FRAMETYPE_NUM = (uint32)(5)
+typealias VlFrameType UInt32
+const VL_FRAMETYPE_DISC = (UInt32)(1)
+const VL_FRAMETYPE_ORIENTED_DISC = (UInt32)(2)
+const VL_FRAMETYPE_ELLIPSE = (UInt32)(3)
+const VL_FRAMETYPE_ORIENTED_ELLIPSE = (UInt32)(4)
+const VL_FRAMETYPE_NUM = (UInt32)(5)
 # end enum VlFrameType
 
 type _VlFrameDisc
@@ -1652,25 +1652,25 @@ type VlCovDetFeatureLaplacianScale
 end
 
 # begin enum _VlCovDetMethod
-typealias _VlCovDetMethod Uint32
-const VL_COVDET_METHOD_DOG = (uint32)(1)
-const VL_COVDET_METHOD_HESSIAN = (uint32)(2)
-const VL_COVDET_METHOD_HESSIAN_LAPLACE = (uint32)(3)
-const VL_COVDET_METHOD_HARRIS_LAPLACE = (uint32)(4)
-const VL_COVDET_METHOD_MULTISCALE_HESSIAN = (uint32)(5)
-const VL_COVDET_METHOD_MULTISCALE_HARRIS = (uint32)(6)
-const VL_COVDET_METHOD_NUM = (uint32)(7)
+typealias _VlCovDetMethod UInt32
+const VL_COVDET_METHOD_DOG = (UInt32)(1)
+const VL_COVDET_METHOD_HESSIAN = (UInt32)(2)
+const VL_COVDET_METHOD_HESSIAN_LAPLACE = (UInt32)(3)
+const VL_COVDET_METHOD_HARRIS_LAPLACE = (UInt32)(4)
+const VL_COVDET_METHOD_MULTISCALE_HESSIAN = (UInt32)(5)
+const VL_COVDET_METHOD_MULTISCALE_HARRIS = (UInt32)(6)
+const VL_COVDET_METHOD_NUM = (UInt32)(7)
 # end enum _VlCovDetMethod
 
 # begin enum VlCovDetMethod
-typealias VlCovDetMethod Uint32
-const VL_COVDET_METHOD_DOG = (uint32)(1)
-const VL_COVDET_METHOD_HESSIAN = (uint32)(2)
-const VL_COVDET_METHOD_HESSIAN_LAPLACE = (uint32)(3)
-const VL_COVDET_METHOD_HARRIS_LAPLACE = (uint32)(4)
-const VL_COVDET_METHOD_MULTISCALE_HESSIAN = (uint32)(5)
-const VL_COVDET_METHOD_MULTISCALE_HARRIS = (uint32)(6)
-const VL_COVDET_METHOD_NUM = (uint32)(7)
+typealias VlCovDetMethod UInt32
+const VL_COVDET_METHOD_DOG = (UInt32)(1)
+const VL_COVDET_METHOD_HESSIAN = (UInt32)(2)
+const VL_COVDET_METHOD_HESSIAN_LAPLACE = (UInt32)(3)
+const VL_COVDET_METHOD_HARRIS_LAPLACE = (UInt32)(4)
+const VL_COVDET_METHOD_MULTISCALE_HESSIAN = (UInt32)(5)
+const VL_COVDET_METHOD_MULTISCALE_HARRIS = (UInt32)(6)
+const VL_COVDET_METHOD_NUM = (UInt32)(7)
 # end enum VlCovDetMethod
 
 typealias _VlCovDet Void
@@ -1760,17 +1760,17 @@ const VL_FISHER_FLAG_IMPROVED = VL_FISHER_FLAG_NORMALIZED | VL_FISHER_FLAG_SQUAR
 const VL_FISHER_FLAG_FAST = 0x01 << 2
 
 # begin enum _VlGMMInitialization
-typealias _VlGMMInitialization Uint32
-const VlGMMKMeans = (uint32)(0)
-const VlGMMRand = (uint32)(1)
-const VlGMMCustom = (uint32)(2)
+typealias _VlGMMInitialization UInt32
+const VlGMMKMeans = (UInt32)(0)
+const VlGMMRand = (UInt32)(1)
+const VlGMMCustom = (UInt32)(2)
 # end enum _VlGMMInitialization
 
 # begin enum VlGMMInitialization
-typealias VlGMMInitialization Uint32
-const VlGMMKMeans = (uint32)(0)
-const VlGMMRand = (uint32)(1)
-const VlGMMCustom = (uint32)(2)
+typealias VlGMMInitialization UInt32
+const VlGMMKMeans = (UInt32)(0)
+const VlGMMRand = (UInt32)(1)
+const VlGMMCustom = (UInt32)(2)
 # end enum VlGMMInitialization
 
 typealias _VlGMM Void
@@ -1821,9 +1821,9 @@ type VlHIKMTree
 end
 
 # begin enum VlHogVariant_
-typealias VlHogVariant_ Uint32
-const VlHogVariantDalalTriggs = (uint32)(0)
-const VlHogVariantUoctti = (uint32)(1)
+typealias VlHogVariant_ UInt32
+const VlHogVariantDalalTriggs = (UInt32)(0)
+const VlHogVariantUoctti = (UInt32)(1)
 # end enum VlHogVariant_
 
 typealias VlHogVariant VlHogVariant_
@@ -1848,13 +1848,13 @@ end
 typealias VlHog VlHog_
 
 # begin enum _VlLbpMappingType
-typealias _VlLbpMappingType Uint32
-const VlLbpUniform = (uint32)(0)
+typealias _VlLbpMappingType UInt32
+const VlLbpUniform = (UInt32)(0)
 # end enum _VlLbpMappingType
 
 # begin enum VlLbpMappingType
-typealias VlLbpMappingType Uint32
-const VlLbpUniform = (uint32)(0)
+typealias VlLbpMappingType UInt32
+const VlLbpUniform = (UInt32)(0)
 # end enum VlLbpMappingType
 
 immutable Array_256_vl_uint8
@@ -2391,49 +2391,49 @@ end
 typealias VlSvm Void
 
 # begin enum ANONYMOUS_4
-typealias ANONYMOUS_4 Uint32
-const VlSvmSolverNone = (uint32)(0)
-const VlSvmSolverSgd = (uint32)(1)
-const VlSvmSolverSdca = (uint32)(2)
+typealias ANONYMOUS_4 UInt32
+const VlSvmSolverNone = (UInt32)(0)
+const VlSvmSolverSgd = (UInt32)(1)
+const VlSvmSolverSdca = (UInt32)(2)
 # end enum ANONYMOUS_4
 
 # begin enum VlSvmSolverType
-typealias VlSvmSolverType Uint32
-const VlSvmSolverNone = (uint32)(0)
-const VlSvmSolverSgd = (uint32)(1)
-const VlSvmSolverSdca = (uint32)(2)
+typealias VlSvmSolverType UInt32
+const VlSvmSolverNone = (UInt32)(0)
+const VlSvmSolverSgd = (UInt32)(1)
+const VlSvmSolverSdca = (UInt32)(2)
 # end enum VlSvmSolverType
 
 # begin enum ANONYMOUS_5
-typealias ANONYMOUS_5 Uint32
-const VlSvmLossHinge = (uint32)(0)
-const VlSvmLossHinge2 = (uint32)(1)
-const VlSvmLossL1 = (uint32)(2)
-const VlSvmLossL2 = (uint32)(3)
-const VlSvmLossLogistic = (uint32)(4)
+typealias ANONYMOUS_5 UInt32
+const VlSvmLossHinge = (UInt32)(0)
+const VlSvmLossHinge2 = (UInt32)(1)
+const VlSvmLossL1 = (UInt32)(2)
+const VlSvmLossL2 = (UInt32)(3)
+const VlSvmLossLogistic = (UInt32)(4)
 # end enum ANONYMOUS_5
 
 # begin enum VlSvmLossType
-typealias VlSvmLossType Uint32
-const VlSvmLossHinge = (uint32)(0)
-const VlSvmLossHinge2 = (uint32)(1)
-const VlSvmLossL1 = (uint32)(2)
-const VlSvmLossL2 = (uint32)(3)
-const VlSvmLossLogistic = (uint32)(4)
+typealias VlSvmLossType UInt32
+const VlSvmLossHinge = (UInt32)(0)
+const VlSvmLossHinge2 = (UInt32)(1)
+const VlSvmLossL1 = (UInt32)(2)
+const VlSvmLossL2 = (UInt32)(3)
+const VlSvmLossLogistic = (UInt32)(4)
 # end enum VlSvmLossType
 
 # begin enum ANONYMOUS_6
-typealias ANONYMOUS_6 Uint32
-const VlSvmStatusTraining = (uint32)(1)
-const VlSvmStatusConverged = (uint32)(2)
-const VlSvmStatusMaxNumIterationsReached = (uint32)(3)
+typealias ANONYMOUS_6 UInt32
+const VlSvmStatusTraining = (UInt32)(1)
+const VlSvmStatusConverged = (UInt32)(2)
+const VlSvmStatusMaxNumIterationsReached = (UInt32)(3)
 # end enum ANONYMOUS_6
 
 # begin enum VlSvmSolverStatus
-typealias VlSvmSolverStatus Uint32
-const VlSvmStatusTraining = (uint32)(1)
-const VlSvmStatusConverged = (uint32)(2)
-const VlSvmStatusMaxNumIterationsReached = (uint32)(3)
+typealias VlSvmSolverStatus UInt32
+const VlSvmStatusTraining = (UInt32)(1)
+const VlSvmStatusConverged = (UInt32)(2)
+const VlSvmStatusMaxNumIterationsReached = (UInt32)(3)
 # end enum VlSvmSolverStatus
 
 type VlSvmStatistics_
